@@ -1,0 +1,19 @@
+[mcp_servers.google-trends]
+command = "npx"
+args = [
+    "-y",
+    "@den.dance/google-trends-mcp",
+]
+
+[mcp_servers.playwright]
+command = "npx"
+args = ["@playwright/mcp@latest"]
+
+[mcp_servers.remotion]
+command = "npx"
+args = [
+    "-y",
+    "@remotion/mcp@4.0.467",
+    "--directory",
+    "./remotion-all",
+]
