@@ -29,6 +29,18 @@ def grab_last_frame(video, out_path):
     )
 
 
+def get_fps(video):
+    # The end-card's own fps must match the source clip's, or concat -c copy
+    # fails/desyncs on fps mismatch (e.g. a 60fps clip + a hardcoded-30fps card).
+    result = subprocess.run(
+        ["ffprobe", "-v", "error", "-select_streams", "v:0",
+         "-show_entries", "stream=r_frame_rate", "-of", "csv=p=0", video],
+        check=True, capture_output=True, text=True,
+    )
+    num, _, den = result.stdout.strip().partition("/")
+    return float(num) / float(den or 1)
+
+
 def build_endcard_image(src, out_path, line1, line2, handle):
     img = Image.open(src).convert("RGB").resize((W, H))
     img = ImageEnhance.Brightness(img).enhance(0.55)
@@ -51,11 +63,11 @@ def build_endcard_image(src, out_path, line1, line2, handle):
     img.save(out_path, quality=95)
 
 
-def build_endcard_video(image_path, out_path, hold_s):
+def build_endcard_video(image_path, out_path, hold_s, fps):
     subprocess.run(
         ["ffmpeg", "-y", "-loop", "1", "-i", image_path,
          "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo", "-t", str(hold_s),
-         "-vf", "fps=30,format=yuv420p",
+         "-vf", f"fps={fps},format=yuv420p",
          "-c:v", "libx264", "-crf", "18", "-preset", "veryfast", "-pix_fmt", "yuv420p",
          "-c:a", "aac", "-ar", "48000", "-ac", "2", "-shortest", out_path],
         check=True, capture_output=True,
@@ -63,8 +75,13 @@ def build_endcard_video(image_path, out_path, hold_s):
 
 
 def concat(main_video, endcard_video, out_path, tmpdir):
+    # concat demuxer resolves relative paths against the list file's own
+    # directory (tmpdir here), not the caller's cwd -- always write
+    # absolute paths or a relative main_video silently fails to resolve.
     list_path = Path(tmpdir) / "concat.txt"
-    list_path.write_text(f"file '{main_video}'\nfile '{endcard_video}'\n")
+    main_video_abs = str(Path(main_video).resolve())
+    endcard_video_abs = str(Path(endcard_video).resolve())
+    list_path.write_text(f"file '{main_video_abs}'\nfile '{endcard_video_abs}'\n")
     subprocess.run(
         ["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(list_path), "-c", "copy", out_path],
         check=True, capture_output=True,
@@ -88,7 +105,7 @@ def main():
 
         grab_last_frame(args.video, str(last_frame))
         build_endcard_image(str(last_frame), str(endcard_img), args.line1, args.line2, args.handle)
-        build_endcard_video(str(endcard_img), str(endcard_vid), args.hold)
+        build_endcard_video(str(endcard_img), str(endcard_vid), args.hold, get_fps(args.video))
         concat(args.video, str(endcard_vid), args.out, tmpdir)
 
     print(f"wrote {args.out}", file=sys.stderr)

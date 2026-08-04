@@ -48,23 +48,30 @@ repurposing.
 Down from the original 20 → 15 (after pass 1) → **12 now** (after pass 2). Two more S-tier picks
 that looked solid after pass 1 (`vqya4IBji58` Tree Sentinel "perfect run" and `2pIPs_ut25o`'s Patches
 payoff) turned out on dense review to be dominated by dead time or menu/black/desktop frames and are
-now fully dropped — see the Rejected appendix. **6 of these 12 need the tightened in/out below, not
+now fully dropped — see the Rejected appendix. **7 of these 12 need the tightened in/out below, not
 the original span** (marked ⟲) — the moment is real, but part of the original window was filler.
 
-| Stream | In → Out | Category | Label |
-|---|---|---|---|
-| ✓ `NxOMr6_jzA4` | 02:19:58 → 02:20:53 | BOSS | Calls the boss "cancer-shaped," dies the instant he says it, then repeats the irony — retimed to end right after the joke lands, before the reload/retry that followed in the original cut |
-| ⟲ `NxOMr6_jzA4` | 03:17:56 → 03:18:58 | RAGE | "Hand" enemies flip him the middle finger — "I hate these hands" (was 03:17:56→03:19:10; trimmed a dead location-card + inventory-menu tail) |
-| ✓ `NxOMr6_jzA4` | 01:29:47 → 01:31:00 | RAGE | "Bhai bhai bhai bhai!" — panicked wipe vs Weapon-Bequeathed Harmonia, facecam breaks into a laugh right at the DEFEAT screen |
-| ✓ `jd9BmFyCIn8` | 01:16:52 → 01:18:07 | BOSS | Boss fight vs the Ancestor Spirit (Siofra River) — its glowing red spirit-form charges him across the misty plain |
-| ⟲ `hCbf17Aj9CI` | 00:59:39 → 01:00:50 | BOSS | Clutch win vs Deathbird — "chill chill chill, we got it" (was 00:59:39→01:01:08; trimmed a calm Torrent ride-away tail) |
-| ✓ `y9ikYH3oECU` | 01:13:52 → 01:14:44 | RAGE | A corrupted save forces a restart — quits out to the Windows desktop (visible taskbar confirms it) |
-| ✓ `j8fuJ2xbVIg` | 00:23:10 → 00:24:45 | BOSS | Rennala boss intro cutscene — comedic "the Queen betrayed us" reveal |
-| ✓ `j8fuJ2xbVIg` | 00:51:24 → 00:52:51 | BOSS | Rennala's boss transformation — comedic "she turned into Goku" reaction |
-| ⟲ `j8fuJ2xbVIg` | 00:57:03 → 00:57:30 | BOSS | "I hate this boss!" rage quote mid-fight (was 00:57:03→00:57:53; the "comedic surrender" tail was actually calm unrelated walking, cut) |
-| ⟲ `AF_7niXth8g` | 00:52:55 → 00:53:25 | RAGE | Meltdown — "I am dead" spam dying to a bat/fire swarm (was 00:52:55→00:53:52; trimmed a post-death respawn-run + location-card tail) |
-| ⟲ `AF_7niXth8g` | 01:52:46 → 01:53:08 | BOSS | "I hate this boss" — Red Wolf of Radagon (was 01:52:46→01:53:29; trimmed a calm walk-away tail) |
-| ⟲ `AF_7niXth8g` | 01:56:30 → 01:56:45 | RAGE | Furious taunt finally killing the Red Wolf of Radagon (was 01:56:30→01:57:03; trimmed a calm aftermath tail) |
+**All 12 are now PRODUCED** — captioned, end-carded, and sitting in `~/Desktop/clips/` numbered
+`01`–`12` to match this table's row order (for quick tracking of what's done). Production caught one
+more filler tail during cutting: `jd9BmFyCIn8`'s Ancestor Spirit clip was re-tightened from
+01:16:52→01:18:07 down to **01:16:52→01:17:15** after a from-scratch dense re-check found the last
+~50s was calm Torrent traversal with no enemy on screen — the same failure pattern as the other ⟲
+rows, just caught one stage later (during cutting instead of during the earlier audit passes).
+
+| # | Stream | In → Out | Category | Label | Clip |
+|---|---|---|---|---|---|
+| 1 | ✓ `NxOMr6_jzA4` | 02:19:58 → 02:20:53 | BOSS | Calls the boss "cancer-shaped," dies the instant he says it, then repeats the irony — retimed to end right after the joke lands, before the reload/retry that followed in the original cut | `01-cancer-boss-instant-death.mp4` |
+| 2 | ⟲ `NxOMr6_jzA4` | 03:17:56 → 03:18:58 | RAGE | "Hand" enemies flip him the middle finger — "I hate these hands" (was 03:17:56→03:19:10; trimmed a dead location-card + inventory-menu tail) | `02-hand-enemies-middle-finger.mp4` |
+| 3 | ✓ `NxOMr6_jzA4` | 01:29:47 → 01:31:00 | RAGE | "Bhai bhai bhai bhai!" — panicked wipe vs Weapon-Bequeathed Harmonia, facecam breaks into a laugh right at the DEFEAT screen | `03-bhai-bhai-bhai-panicked-wipe.mp4` |
+| 4 | ⟲ `jd9BmFyCIn8` | 01:16:52 → 01:17:15 | BOSS | Boss fight vs the Ancestor Spirit (Siofra River) — its glowing red spirit-form charges him across the misty plain, ends on the kill screen + genuine fist-pump reaction (was 01:16:52→01:18:07; production cut found ~50s of no-enemy Torrent traversal past the kill and tightened further) | `04-ancestor-spirit-chase.mp4` |
+| 5 | ⟲ `hCbf17Aj9CI` | 00:59:39 → 01:00:50 | BOSS | Clutch win vs Deathbird — "chill chill chill, we got it" (was 00:59:39→01:01:08; trimmed a calm Torrent ride-away tail) | `05-deathbird-clutch-win.mp4` |
+| 6 | ✓ `y9ikYH3oECU` | 01:13:52 → 01:14:44 | RAGE | A corrupted save forces a restart — quits out to the Windows desktop (visible taskbar confirms it) | `06-corrupted-save-quit.mp4` |
+| 7 | ✓ `j8fuJ2xbVIg` | 00:23:10 → 00:24:45 | BOSS | Rennala boss intro cutscene — comedic "the Queen betrayed us" reveal | `07-rennala-queen-betrayed-us.mp4` |
+| 8 | ✓ `j8fuJ2xbVIg` | 00:51:24 → 00:52:51 | BOSS | Rennala's boss transformation — comedic "she turned into Goku" reaction | `08-rennala-goku-transform.mp4` |
+| 9 | ⟲ `j8fuJ2xbVIg` | 00:57:03 → 00:57:30 | BOSS | "I hate this boss!" rage quote mid-fight (was 00:57:03→00:57:53; the "comedic surrender" tail was actually calm unrelated walking, cut) | `09-i-hate-this-boss-rennala.mp4` |
+| 10 | ⟲ `AF_7niXth8g` | 00:52:55 → 00:53:25 | RAGE | Meltdown — "I am dead" spam dying to a bat/fire swarm (was 00:52:55→00:53:52; trimmed a post-death respawn-run + location-card tail) | `10-i-am-dead-meltdown.mp4` |
+| 11 | ⟲ `AF_7niXth8g` | 01:52:46 → 01:53:08 | BOSS | "I hate this boss" — Red Wolf of Radagon (was 01:52:46→01:53:29; trimmed a calm walk-away tail) | `11-red-wolf-hate.mp4` |
+| 12 | ⟲ `AF_7niXth8g` | 01:56:30 → 01:56:45 | RAGE | Furious taunt finally killing the Red Wolf of Radagon (was 01:56:30→01:57:03; trimmed a calm aftermath tail) | `12-red-wolf-scream-kill.mp4` |
 
 ---
 
@@ -110,7 +117,7 @@ entire 75s, likely two stitched incidents). See the Rejected appendix for detail
 | ✓ 00:32:01→00:32:59 | RAGE | A | A dangerous bear closes in — facecam visibly tightens from relaxed to tense/yelling as it corners him | "खतरनाक भालू दिमाग गरम कर दिया था... तेरी गांड में दूंगा डंडा।" |
 | 00:36:39→00:37:56 | BOSS | B | *(unverified)* Boss phase-2 transition — "he got shocked!", boss suddenly deals no damage | "फेस टू फेस टू... ब्रो ही गॉट शगर्ड वाओ ये बंदा कुछ डैमेज ही नहीं दे रहा है।" |
 | 01:12:06→01:12:51 | RAGE | B | *(unverified)* Aggressive trash-talk at an enemy | "ठीक है भाई जल्दी जल्दी आगे आ... यू बॉय तेरे को इतना पीटूंगा।" |
-| ✓ 01:16:52→01:18:07 | BOSS | S | Boss fight vs the Ancestor Spirit (Siofra River) — continuous chase/fight, facecam builds through it | "ओ नो साला नो हिट का प्लान लेफ्टेड हो गया... रेडान का पूरा सेट था बे।" |
+| ⟲ 01:16:52→01:17:15 | BOSS | S | Boss fight vs the Ancestor Spirit (Siofra River) — chase/fight/kill/reaction (was 01:16:52→01:18:07; production cut found ~50s of no-enemy Torrent traversal past the kill screen and tightened further — PRODUCED as `04-ancestor-spirit-chase.mp4`) | "ओ नो साला नो हिट का प्लान लेफ्टेड हो गया... रेडान का पूरा सेट था बे।" |
 
 *Dropped: 00:13:48 ("catacombs skirmish" — flat facecam throughout, low-threat enemy, no boss bar,
 confirmed dead on dense review).*
@@ -327,3 +334,10 @@ confirmed-but-tightened (use the new in/out shown), 32 dropped** (18 from pass 1
 review). **12 S-tier candidates survive** as the quick-start list (down from an original 20).
 **B-tier (74 candidates) remains transcript-only / unverified** — none of the B-tier rows have been
 through either visual-verification pass except where noted inline.
+
+**Production status: all 12 quick-start S-tier picks are now cut, captioned, and end-carded** —
+numbered `01`–`12` in `~/Desktop/clips/` matching the quick-start table's row order. One more filler
+tail was caught during cutting (the Ancestor Spirit clip, #4 — see its row above) and re-tightened,
+following the same pattern as the other ⟲ rows. Remaining unproduced candidates: the ~25 other
+confirmed/tightened A-tier picks from the full-sweep tables (never had a produced clip), plus the
+full 74-candidate B-tier pool (still unverified).
